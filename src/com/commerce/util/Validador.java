@@ -14,6 +14,19 @@ public class Validador {
         }
     }
 
+    public static void valCamNum(double campo, String msgEro){ // Valida que el campo no esté vacio.
+        String nueVal = String.valueOf(campo); // Convierte el número en un string.
+        if(nueVal == null || nueVal.trim().isEmpty()){ // Si el campo es nulo o no se ingresó nada.
+            throw new IllegalArgumentException(msgEro); 
+        }
+    }
+
+    public static void valCamInt(int campo, String msgEro){ // Valida que el campo no esté vacio.
+        String nueVal = String.valueOf(campo); // Convierte el número en un string.
+        if(nueVal == null || nueVal.trim().isEmpty()){ // Si el campo es nulo o no se ingresó nada.
+            throw new IllegalArgumentException(msgEro); 
+        }
+    }
     public static void valUrl(String url, String msgEro){ // Valida la URL de almacenamiento.
         if(!(url.matches("^/uploads/img/.+\\.(png|jpg|jpeg)$"))){ // Si la url no coincide con la expresión regular.
             throw new IllegalArgumentException(msgEro); // Muestra el mensaje de error.
@@ -91,7 +104,7 @@ public class Validador {
     }
 
     public static String leeTexto(Scanner sc, String msg){ // Controla el ingreso de texto.
-        System.out.println(msg); // Muestra el mensaje solicitando datos.
+        System.out.println(msg); //  Muestra el mensaje solicitando datos.
         return sc.nextLine();
     }
 

@@ -122,7 +122,7 @@ public class Disc {
     public int getStock(){
         return this.stock;
     }
-    public void setStrock(int stoc){
+    public void setStock(int stoc){
         this.stock = stoc;
     }
 
