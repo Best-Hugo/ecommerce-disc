@@ -23,7 +23,7 @@ public class Disc {
         // Constructor sin valores, útil para Spring/JPA
     }
 
-    public Disc(String tit, String front, String back, String disc, String prod, String grup, String anio, List<Track> list, String desc, double prec, int stoc, String cat){
+    public Disc(String tit, String front, String back, String disc, String prod, String grup, String anio, /*List<Track> list,*/ String desc, double prec, int stoc, String cat){
         this.titulo = tit;
         this.imgFront = front;
         this.imgBack = back;
@@ -31,9 +31,11 @@ public class Disc {
         this.productor = prod;
         this.grupo = grup;
         this.anio = anio;
+        /*
         for(Track track : list){
             this.tracks.add(track);
         }
+            */
         this.descripcion = desc;
         this.precio = prec;   
         this.stock = stoc;

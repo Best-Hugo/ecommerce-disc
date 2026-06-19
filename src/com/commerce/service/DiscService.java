@@ -80,7 +80,7 @@ public class DiscService {
         return discs; // Retorna toda la lista de discos.
     }
 
-    public Disc buscarDisc(int id){ // Busca un disco en particular.
+    public Disc buscarDisc(int id){ // Busca un disco en particular, si no lo encuentra arroja una excepción.
         for(Disc disco : discs){ // Recorre toda la lista de discos.
             if(disco.getId() == id){ // Cuando encuentre el disco por su id.
                 return disco; // retrona dicho disco.
